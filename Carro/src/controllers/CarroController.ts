@@ -14,7 +14,7 @@ class CarroController {
 
     async listar(request: Request, response: Response) {
         try {
-            const carros = await CarroSchema.find();
+            const carros = await CarroSchema.find().populate("marca");
             response.status(200).json({ data: carros, error: false, msg: "Lista de carros atualizada!", });
         } catch (error) {
             response.status(400).json({ data: error, error: true, msg: "Não foi possível listar os carros.", });

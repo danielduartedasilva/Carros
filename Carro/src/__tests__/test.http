@@ -1,4 +1,15 @@
+### Marcas testes
+POST  http://localhost:1234/marca/cadastrar
+Content-Type: application/json
+
+{
+    "nome": "Renalt"
+}
+
 ###
+GET  http://localhost:1234/marca/listar/609221ca626f1e0b207cd995
+
+### Carro testes
 POST  http://localhost:1234/carro/cadastrar
 Content-Type: application/json
 

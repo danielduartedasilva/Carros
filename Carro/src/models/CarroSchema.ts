@@ -1,4 +1,6 @@
 import { model, Schema } from "mongoose";
+import { mongoose } from "../config/database";
+
 const CarroSchema = new Schema({
     modelo: { 
         type: String, 
@@ -13,6 +15,11 @@ const CarroSchema = new Schema({
         type: Number,
         required: [true,"O campo ano do carro é obrigatório!"],
     },
+    marca: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "marcas",
+        required: [true, "O campo marca do carro é obrigatório!"],
+    },
 },
     {
         //Gera o criadoEm
@@ -20,5 +27,4 @@ const CarroSchema = new Schema({
     }
 );
 
-//export { CarroSchema};
 export default model("carros", CarroSchema);
