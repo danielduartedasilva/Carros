@@ -1,29 +1,28 @@
-### Marcas testes
-POST  http://localhost:1234/marca/cadastrar
-Content-Type: application/json
-
-{
-    "nome": "Renalt"
-}
-
-###
-GET  http://localhost:1234/marca/listar/609221ca626f1e0b207cd995
-
 ### Carro testes
 POST  http://localhost:1234/carro/cadastrar
 Content-Type: application/json
 
 {
-    "modelo": "Monza",
-    "placa": "ADF-3355",
-    "ano": 1990
+    "modelo": "A3",
+    "placa": "AEE-2222",
+    "ano": 2015
 }
+
+###
+GET  http://localhost:1234/carro/buscar/AEE-2222
 
 ###
 GET  http://localhost:1234/carro/listar
 
 ###
-GET  http://localhost:1234/carro/listar/ADF-3355
+PUT  http://localhost:1234/carro/alterar
+Content-Type: application/json
+
+{
+    "modelo": "A2",
+    "placa": "AEE-2222",
+    "ano": 2015
+}
 
 ###
-DELETE  http://localhost:1234/carro/remover/ADF-3355
+DELETE  http://localhost:1234/carro/remover/AEE-2222

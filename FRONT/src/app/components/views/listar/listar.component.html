@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let carro of carros">
+        {{ carro._id }}
+    </li>
+</ul>
+<select name="" id="">
+    <option *ngFor="let carro of carros">
+        {{ carro._id }}
+    </option>
+</select>
+<a routerLink="/carro/cadastrar">Novo Carro</a>
