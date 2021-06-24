@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
 import { Carro } from 'src/app/models/Carro';
+import { CarroService } from 'src/app/services/carro.service';
 
 @Component({
   selector: 'app-listar',
@@ -9,16 +9,13 @@ import { Carro } from 'src/app/models/Carro';
 })
 export class ListarComponent implements OnInit {
   carros: Carro[] = [];
-  
-  constructor(private http: HttpClient) { 
-    //Observable - para notificar quando voltar a informação
-    http.get<Carro[]>("http://localhost:1234/carro/listar").subscribe((carros) => {
-    for (let carro of carros) {
-      console.log(carro._id);
-    }  
-    });
-  }
-  ngOnInit(): void {
-  }
 
+  constructor(private service: CarroService) { }
+  
+  ngOnInit(): void {
+    //Observable - para notificar quando voltar a informação
+    this.service.listar().subscribe((carros) => {
+    this.carros = carros;
+  });
+  }
 }

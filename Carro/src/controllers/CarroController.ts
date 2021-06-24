@@ -8,10 +8,9 @@ class CarroController {
             if (await CarroSchema.exists({ placa })) {
                 response.status(409).json({msg:"Esse carro já existe!"});
             } else {
-                const carro = await CarroSchema.create(request.body);
-            response.status(201).json({ data: carro, error: false, msg: "Carro cadastrado com sucesso!", });
-            }
-            
+                const novoCarro = await CarroSchema.create(request.body);
+            response.status(201).json(novoCarro);
+            } 
         } catch (error) {
             response.status(400).json({ data: error, error: true, msg: "Não foi possível cadastrar o carro.", });
         }   

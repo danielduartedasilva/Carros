@@ -3,7 +3,7 @@ POST  http://localhost:1234/carro/cadastrar
 Content-Type: application/json
 
 {
-    "modelo": "A3",
+    "modelo": "A2",
     "placa": "AEE-2222",
     "ano": 2015
 }

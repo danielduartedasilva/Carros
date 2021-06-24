@@ -1,2 +1,6 @@
-<p>cadastrar works!</p>
+<label for="modelo">Modelo do Carro</label>
+<input type="text" name="modelo" [(ngModel)]="carro.modelo"/>
+<br/>
+<button (click)="cadastrar()">Cadastrar</button>
+<br/>
 <a routerLink="">Listar Carros</a>

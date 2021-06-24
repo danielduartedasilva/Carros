@@ -9,7 +9,7 @@ const routes: Routes = [
     component: ListarComponent
   },
   {
-    path: 'carro/cadastrar ',
+    path: 'carro/cadastrar',
     component: CadastrarComponent
   }
 ];
