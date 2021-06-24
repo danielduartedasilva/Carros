@@ -15,12 +15,12 @@ GET  http://localhost:1234/carro/buscar/AEE-2222
 GET  http://localhost:1234/carro/listar
 
 ###
-PUT  http://localhost:1234/carro/alterar
+PUT  http://localhost:1234/carro/alterar/AEE-2222
 Content-Type: application/json
 
 {
     "modelo": "A2",
-    "placa": "AEE-2222",
+    "placa": "AEE-0000",
     "ano": 2015
 }
 

@@ -1,32 +1,41 @@
 <mat-card>
-    <mat-card-title> Novo Carro </mat-card-title>
-    <mat-card-content>
-      <mat-form-field>
-        <mat-label for="modelo">Modelo</mat-label>
-        <input matInput placeholder="Digite o modelo do carro" type="text" name="modelo" [(ngModel)]="modelo" />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="placa">Placa</mat-label>
-        <input matInput placeholder="Digite a placa do carro" type="text" name="placa" [(ngModel)]="placa" />
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label for="ano">Ano</mat-label>
-        <input matInput placeholder="Digite o ano do carro" type="number" name="ano" [(ngModel)]="ano" />
-      </mat-form-field>
-      <div class="actions">
-        <button mat-raised-button color="warn" (click)="cadastrar()">Cadastrar</button>
-        <a mat-stroked-button routerLink=""> Listar Carros </a>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-
-
-
-
-  <!-- <label for="modelo">Modelo do Carro</label>
-<input type="text" name="modelo" [(ngModel)]="modelo"/>
-<br/>
-<button (click)="cadastrar()">Cadastrar</button>
-<br/>
-<a routerLink="">Listar Carros</a> -->
+  <mat-card-title> Novo Carro </mat-card-title>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label for="modelo">Modelo</mat-label>
+      <input
+        matInput
+        placeholder="Digite o modelo do carro"
+        type="text"
+        name="modelo"
+        [(ngModel)]="modelo"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label for="placa">Placa</mat-label>
+      <input
+        matInput
+        placeholder="Digite a placa do carro"
+        type="text"
+        name="placa"
+        [(ngModel)]="placa"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label for="ano">Ano</mat-label>
+      <input
+        matInput
+        placeholder="Digite o ano do carro"
+        type="number"
+        name="ano"
+        [(ngModel)]="ano"
+      />
+    </mat-form-field>
+    <div class="actions">
+      <button mat-raised-button color="warn" (click)="cadastrar()">
+        Cadastrar
+      </button>
+      <a mat-stroked-button routerLink=""> Listar Carros </a>
+    </div>
+  </mat-card-content>
+</mat-card>

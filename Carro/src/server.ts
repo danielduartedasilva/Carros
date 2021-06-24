@@ -13,7 +13,6 @@ app.use(cors());
 app.use(express.json());
 app.use(router);
 
-
-app.listen(1234, function() {
-    console.log("Servidor rodando");
+app.listen(1234, function () {
+  console.log("Servidor rodando");
 });
