@@ -1,17 +1,25 @@
-<a routerLink="/carro/cadastrar">Novo Carro</a>
+<a mat-raised-button color="warn" routerLink="/carro/cadastrar">
+    <mat-icon>event</mat-icon>
+    Novo Carro
+</a>
+
 <table>
     <thead>
         <tr>
-            <th>#</th>
-            <th>Modelo do Carro</th>
-            <th>Ano do Carro</th>
+            <th>Id</th>
+            <th>Modelo</th>
+            <th>Placa</th>
+            <th>Ano</th>
+            <th>Criado em</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let carro of carros">
             <td>{{ carro._id }}</td>
             <td>{{ carro.modelo }}</td>
+            <td>{{ carro.placa }}</td>
             <td>{{ carro.ano }}</td>
+            <td>{{ carro.createdAt | date: "dd/MM/yyyy HH:mm:ss" }}</td>
         </tr>
     </tbody>
 </table>

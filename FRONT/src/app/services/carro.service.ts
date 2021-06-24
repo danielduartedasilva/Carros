@@ -7,7 +7,7 @@ import { Carro } from '../models/Carro';
   providedIn: 'root'
 })
 export class CarroService {
-  baseURL = "http://localhost:1234/";
+  private baseURL = "http://localhost:1234/";
 
   constructor(private http: HttpClient) { }
   listar(): Observable<Carro[]>{

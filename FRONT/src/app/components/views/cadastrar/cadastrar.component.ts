@@ -8,14 +8,20 @@ import { CarroService } from 'src/app/services/carro.service';
   styleUrls: ['./cadastrar.component.css']
 })
 export class CadastrarComponent implements OnInit {
-  carro: Carro = new Carro();
+  modelo!: string;
+  placa!: string;
+  ano!: number;
+  //createdAt!: Date;
   constructor(private service: CarroService) { }
 
   ngOnInit(): void {}
 
   cadastrar(): void{
-    //console.log(this.carro.modelo);
-    this.service.cadastrar(this.carro).subscribe((carro) => {
+    let carro = new Carro();
+    carro.modelo = this.modelo;
+    carro.placa = this.placa;
+    carro.ano = this.ano;
+    this.service.cadastrar(carro).subscribe((carro) => {
       console.log(carro);
     });
   }
